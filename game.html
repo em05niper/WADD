@@ -10,24 +10,25 @@
     <script defer src="gameBehaviour.js"></script>
 </head>
 <body>
-    <div>
+    <div class="gameContainer">
         <div>
             <input class = "speed-slider" id = "speed-slider" type = "range" min="0" max = "3" value = "1">
         </div>
 
-        <div>
-            <input class = "rotation-slider" id = "rotation-slider" type = "range" min="-6" max = "6" value = "0">
+        <div id="rotationControl">
+            <label for="rotation-slider">Rotation:</label>
+            <input type="range" id="rotation-slider" min="-10" max="10" value="0" step="1">
         </div>
 
         <div id="myProgress">
             <div id="myBar"></div>
         </div>
-        <button onclick="fire()">Click Me</button> 
+        <button onclick="fire()">FIRE!</button> 
 
         <br>
 
+        <div id="crewControls">
         <label for="crewMember1">Designate location for the 1st crew member:</label>
-
         <select onclick="crewLocations.updateRooms()" name="crewMember1" id="crewMember1">
             <option value="engine">Engine Room</option>
             <option value="sonar">Sonar Room</option>
@@ -35,8 +36,10 @@
             <option value="cloaking">Cloaking Room</option>
             <option value="navigation">Navigation Room</option>
         </select>
-        <Br>
-        <label for="crewMember1">Designate location for the 2nd crew member:</label>
+
+        <br>
+
+        <label for="crewMember2">Designate location for the 2nd crew member:</label>
         <select onclick="crewLocations.updateRooms()" name="crewMember2" id="crewMember2">
             <option value="engine">Engine Room</option>
             <option value="sonar">Sonar Room</option>
@@ -44,8 +47,10 @@
             <option value="cloaking">Cloaking Room</option>
             <option value="navigation">Navigation Room</option>
         </select>
+
         <br>
-        <label for="crewMember1">Designate location for the 3rd crew member:</label>
+
+        <label for="crewMember3">Designate location for the 3rd crew member:</label>
         <select onclick="crewLocations.updateRooms()" name="crewMember3" id="crewMember3">
             <option value="engine">Engine Room</option>
             <option value="sonar">Sonar Room</option>
@@ -53,14 +58,15 @@
             <option value="cloaking">Cloaking Room</option>
             <option value="navigation">Navigation Room</option>
         </select>
+        
+        </div>
 
-        <div>
-            <p>Enemy Location</p>
-            <p id = "enemyLocation">Unknown...</p>
+        <div id="enemyLocationContainer">
+            <p id="enemyLocation">Enemy Location: (x, y)</p>
         </div>
 
         <div class="debugTools">
-        <button onclick ="endGame()"> end game </button>
+        <!--<button onclick ="endGame()"> end game </button>-->
         </div>
 
     </div>

@@ -110,6 +110,11 @@ let enemySub = {
     }
 }
 
+const storedPlayer = JSON.parse(localStorage.getItem('player'));
+if (storedPlayer && storedPlayer.name) {
+    playerSub.name = storedPlayer.name;
+}
+
 
 let crewLocations = {
         torepedoRoomManned: false,
@@ -281,7 +286,6 @@ function sonar() {
 
     }
     else {
-        console.log("Sonar room is not manned.");
     }
 }
 
@@ -291,9 +295,13 @@ function degToRad(deg) {
 }
 
 
-function endGame(){
-    window.location.href = 'leaderboard.html';
-}
+//function endGame(){
+//    localStorage.setItem('player', JSON.stringify({
+//        name: playerSub.name,
+//        score: playerSub.score
+//    }));
+//    window.location.href = 'leaderboard.html';
+//}
 
 setInterval(() => {
     load();    // Handle reloading of torpedoes
