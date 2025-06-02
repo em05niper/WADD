@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of your webpage">
+    <meta name="author" content="Your Name">
+    <title>Sewer Pipe</title>
+    <link rel="stylesheet" href="gameStyles.css">
+    <script defer src="gameBehaviour.js"></script>
+</head>
+<body>
+    <div>
+        <div>
+            <input class = "speed-slider" id = "speed-slider" type = "range" min="0" max = "3" value = "1">
+        </div>
+
+        <div>
+            <input class = "rotation-slider" id = "rotation-slider" type = "range" min="-6" max = "6" value = "0">
+        </div>
+
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+        <button onclick="fire()">Click Me</button> 
+
+        <br>
+
+        <label for="crewMember1">Designate location for the 1st crew member:</label>
+
+        <select onclick="crewLocations.updateRooms()" name="crewMember1" id="crewMember1">
+            <option value="engine">Engine Room</option>
+            <option value="sonar">Sonar Room</option>
+            <option value="torpedo">Torpedo Room</option>
+            <option value="cloaking">Cloaking Room</option>
+            <option value="navigation">Navigation Room</option>
+        </select>
+        <Br>
+        <label for="crewMember1">Designate location for the 2nd crew member:</label>
+        <select onclick="crewLocations.updateRooms()" name="crewMember2" id="crewMember2">
+            <option value="engine">Engine Room</option>
+            <option value="sonar">Sonar Room</option>
+            <option value="torpedo">Torpedo Room</option>
+            <option value="cloaking">Cloaking Room</option>
+            <option value="navigation">Navigation Room</option>
+        </select>
+        <br>
+        <label for="crewMember1">Designate location for the 3rd crew member:</label>
+        <select onclick="crewLocations.updateRooms()" name="crewMember3" id="crewMember3">
+            <option value="engine">Engine Room</option>
+            <option value="sonar">Sonar Room</option>
+            <option value="torpedo">Torpedo Room</option>
+            <option value="cloaking">Cloaking Room</option>
+            <option value="navigation">Navigation Room</option>
+        </select>
+
+        <div>
+            <p>Enemy Location</p>
+            <p id = "enemyLocation">Unknown...</p>
+        </div>
+
+        <div class="debugTools">
+        <button onclick ="endGame()"> end game </button>
+        </div>
+
+    </div>
+</body>

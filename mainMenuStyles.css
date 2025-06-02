@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+}
+body {
+    background-color: ghostwhite;
+}
+main{
+    text-align: center;
+    margin: 20px 30px 50px 30px;
+    height: 500px;
+    padding: 20px;
+    background-color: gray;
+        font-family: 'Courier New', Courier, monospace;
+
+}
+
+p1{
+    text-align: center;
+    vertical-align: top;
+    text-shadow: 2px 2px;
+    -webkit-text-fill-color: white;
+}
+
+
+button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.nameSelector{
+    position: relative;
+    top: 120px;
+}
+
+.mainMenuButtons {
+    position: relative;
+    top: 300px;
+
+}
